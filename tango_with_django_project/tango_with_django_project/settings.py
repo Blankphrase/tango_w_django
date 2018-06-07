@@ -15,12 +15,12 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 #stores the path to the directory in which your project’s settings.py module is contained. 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+print(__file__)
 # variable called TEMPLATE_DIR that references templates directory.
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 #create absolute path to the location /tango_with_django_project/static/
-STATIC_DIR = os.path.join(BASE_DIR,'static')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 #create a media directory path
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
@@ -133,9 +133,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-
+STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_URL = '/static/' # http://127.0.0.1:8000/static/
 
 
 #a list of paths with which Django can expect to find static files that can be served.
-STATICFILES_DIRS = [STATIC_DIR, ]
-STATIC_URL = '/static/' # http://127.0.0.1:8000/static/

@@ -5,7 +5,7 @@
 <html>
 
 	<head>
-     <title>Rango</title>
+     <title>ABOUT | Rango</title>
      <!-- CSS -->
     <link rel="stylesheet" href="{% static "css/base.css" %}" /> 
     <!-- JavaScript -->
@@ -15,11 +15,11 @@
 <body>
 	<h1>Rango says...</h1> 
 	<div>
-		hey there partner! <br />
-		<strong>{{ boldmessage }}</strong><br /> </div>
+		This page has been put together by <br />
+		<strong> {{ boldmessage }}</strong></strong><br /> </div>
 	<div>
-        <a href="/rango/about/">About</a><br />
-        <img src="{% static "images/rango_1.jpg"%}" alt="picture-of-rango" /> <!--new line-->
+        <a href="/rango/">Home</a><br />
+        <img src="{{ MEDIA_URL }}meme-f-yea.jpg " alt="meme-f-yea" />
 	</div> 
 </body>
 
