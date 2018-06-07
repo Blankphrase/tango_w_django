@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . import views
 
 def index(request):
 	# Construct a dictionary to pass to the template engine as its context.
@@ -10,3 +11,7 @@ def index(request):
 	# We make use of the shortcut function to make our lives easier. 
 	# Note that the first parameter is the template we wish to use. 
 	return render(request, 'rango/index.html', context=context_dict)
+
+def about(request):
+	about_page = "Rango says here is the about page</br><a href='/rango/'>Home</a>"
+	return HttpResponse(about_page)
