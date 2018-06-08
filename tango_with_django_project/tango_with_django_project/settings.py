@@ -133,8 +133,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATICFILES_DIRS = [STATIC_DIR, ]
-STATIC_URL = '/static/' # http://127.0.0.1:8000/static/
+
 
 
 #a list of paths with which Django can expect to find static files that can be served.

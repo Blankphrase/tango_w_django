@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from . import views
 
+# importing the Category model
+from rango.models import Category
+
 def index(request):
 	# Construct a dictionary to pass to the template engine as its context.
 	# Note the key boldmessage is the same as {{ boldmessage }} in the template! 
