@@ -22,6 +22,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 #create absolute path to the location /tango_with_django_project/static/
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
+STATIC_ROOT = STATIC_DIR
+STATIC_URL = '/static/'
+
 #create a media directory path
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
@@ -132,7 +135,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 
 
 

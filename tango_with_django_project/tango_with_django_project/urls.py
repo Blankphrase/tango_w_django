@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^rango/', include('rango.urls')),
     #above maps any URLs starting
     #with rango/ to be handled by the rango app.
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+if settings.DEBUG == True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
